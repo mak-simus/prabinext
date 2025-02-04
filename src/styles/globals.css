@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --error-color: #ef4444;
+  --background: #f3f4f6;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  @apply bg-gray-50;
+}
+
+.login-page {
+  @apply min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8;
+}
+
+.login-container {
+  @apply max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-lg;
+}
+
+.login-header {
+  @apply text-center;
+}
+
+.login-header h1 {
+  @apply mt-6 text-3xl font-extrabold text-gray-900;
+}
+
+.login-form {
+  @apply mt-8 space-y-6;
+}
+
+.form-group {
+  @apply -space-y-px rounded-md shadow-sm;
+}
+
+.input-field {
+  @apply appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm;
+}
+
+.input-field:first-child {
+  @apply rounded-t-md;
+}
+
+.input-field:last-child {
+  @apply rounded-b-md;
+}
+
+/* Replace @apply with direct class usage for submit button */
+.submit-button {
+  @apply relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200;
+}
+
+/* Add hover state separately */
+.submit-button:hover {
+  @apply bg-indigo-700;
+}
+
+.error-message {
+  @apply text-red-600 text-sm mt-2;
+}
+
+.forgot-password {
+  @apply text-sm text-indigo-600 hover:text-indigo-500 transition-colors duration-200 flex justify-center mt-4;
+}
